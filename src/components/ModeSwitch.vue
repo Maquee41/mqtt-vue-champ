@@ -8,7 +8,7 @@ const selected = ref<string>("")
 let offMessage: null | (() => void) = null
 const { subscribe, onMessage, unsubscribe, publish } = useMqtt()
 
-const modeSync = () => publish(modeTopic, selected.value)
+const modeSync = () => publish(modeTopic + '/on', selected.value)
 
 onMounted(() => {
   subscribe(modeTopic);

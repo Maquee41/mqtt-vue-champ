@@ -1,6 +1,8 @@
 import mqtt, { type MqttClient } from "mqtt";
 import { ref } from "vue";
 
+const VITE_WIRENBOARD_IP = import.meta.env.VITE_WIRENBOARD_IP
+
 type Handler = (topic: string, payload: string) => void;
 
 let client: MqttClient | null = null;
@@ -8,7 +10,7 @@ const handlers = new Set<Handler>();
 
 const isOnline = ref<boolean>(false)
 
-export function useMqtt(url = "ws://192.168.1.111/mqtt") {
+export function useMqtt(url = `ws://${VITE_WIRENBOARD_IP}/mqtt`) {
   if (!client) {
     client = mqtt.connect(url);
 
