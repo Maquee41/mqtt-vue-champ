@@ -1,5 +1,28 @@
-# Vue 3 + TypeScript + Vite
+# MQTT Vue HMI Dashboard
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A lightweight Vue 3 + TypeScript dashboard for monitoring and controlling IoT devices via MQTT.
+Designed for integration with [Wiren Board](https://wirenboard.com/en/) controllers and rule engine [wb-rules](https://github.com/wirenboard/wb-rules).
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Screenshots
+
+<p align="center">
+  <img src="./images/main_window.png" alt="Main Window" width="500" />
+</p>
+
+## What it does
+
+- Show sensor data (temperature, humidity, CO2)
+- Allow switching system working modes (Auto / Dosage / Check)
+- Controls relays via MQTT
+- Displays basic system status
+
+## Dependencies
+
+- Vue 3
+- TypeScript
+- Vite
+- MQTT
+
+## Notes
+
+This is a lightweight prototype / template for MQTT-based control interfaces.
